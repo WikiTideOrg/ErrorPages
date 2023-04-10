@@ -4,13 +4,15 @@
 if ( !$wgCommandLineMode ) {
 	http_response_code( 404 );
 
+	$subdomain = substr( $wgDBname, 0, -4 );
+
 	$output = <<<EOF
 		<!DOCTYPE html>
 		<html lang="en">
 			<head>
 				<meta charset="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<meta name="description" content="Wiki not found" />
+				<meta name="description" content="Wiki Not Found" />
 				<title>Wiki Not Found</title>
 				<link rel="icon" type="image/x-icon" href="https://meta.wikiforge.net/favicon.ico" />
 				<link rel="apple-touch-icon" href="https://meta.wikiforge.net/apple-touch-icon.png" />
@@ -69,11 +71,11 @@ if ( !$wgCommandLineMode ) {
 			<div class="container">
 				<!-- Jumbotron -->
 				<div class="jumbotron">
-					<p style="font-align: center; animation: fadein 1s;"><img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" alt="WikiForge Logo" /></p>
+					<p style="font-align: center; animation: fadein 1s;"><img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" width="130" height="130" alt="WikiForge Logo" /></p>
 					<h1>Wiki Not Found</h1>
 					<p class="lead">We couldn't find this wiki. Check your spelling and try again.</p>
 					<p>
-						<a href="https://meta.wikiforge.net/wiki/Special:RequestWiki?wpsubdomain={substr( $wgDBname, 0, -4 )}" class="btn btn-lg btn-outline-primary" role="button">Request the Wiki</a>
+						<a href="https://meta.wikiforge.net/wiki/Special:RequestWiki?wpsubdomain={$subdomain}" class="btn btn-lg btn-outline-primary" role="button">Request the Wiki</a>
 					</p>
 				</div>
 			</div>
