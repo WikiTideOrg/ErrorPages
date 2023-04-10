@@ -72,7 +72,7 @@ if ( !$wgCommandLineMode ) {
 			<div class="container">
 				<!-- Jumbotron -->
 				<div class="jumbotron">
-					<p style="font-align: center; animation: fadein 1s;"><img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" width="130" height="130" alt="WikiForge Logo" /></p>
+					<img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" width="130" height="130" alt="WikiForge Logo" />
 					<h1>Wiki Not Found</h1>
 					<p class="lead">We couldn't find this wiki. Check your spelling and try again.</p>
 					<p>
