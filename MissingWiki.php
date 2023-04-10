@@ -53,6 +53,7 @@ if ( !$wgCommandLineMode ) {
 						display: flex;
 						justify-content: space-between;
 						margin: 30px auto;
+						padding-left: 10px;
 						max-width: 100%;
 						text-align: center;
 						width: 600px;
@@ -81,7 +82,6 @@ if ( !$wgCommandLineMode ) {
 			</div>
 			<div class="bottom-links">
 				<a href="#" onClick="history.go(-1); return false;">&larr; Go back</a>
-				<a href="https://meta.wikiforge.net/wiki/Special:MyLanguage/WikiForge">Go to WikiForge Meta</a>
 			</div>
 		</html>
 	EOF;
