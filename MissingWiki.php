@@ -52,6 +52,7 @@ if ( !$wgCommandLineMode ) {
 					.bottom-links {
 						display: flex;
 						justify-content: space-between;
+						text-transform: uppercase;
 						margin: 30px auto;
 						padding-left: 10px;
 						max-width: 100%;
