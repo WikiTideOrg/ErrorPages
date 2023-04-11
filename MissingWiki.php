@@ -81,7 +81,7 @@ if ( !$wgCommandLineMode ) {
 				</div>
 			</div>
 			<div class="bottom-links">
-				<a href="#" onClick="history.go(-1); return false;">&larr; Go back</a>
+				<a href="#" onClick="history.go(-1); return false;">&larr; Return whence you came</a>
 			</div>
 		</html>
 	EOF;
