@@ -52,7 +52,6 @@ if ( !$wgCommandLineMode ) {
 					.bottom-links {
 						display: flex;
 						justify-content: space-between;
-						text-transform: uppercase;
 						margin: 30px auto;
 						padding-left: 10px;
 						max-width: 100%;
@@ -82,7 +81,7 @@ if ( !$wgCommandLineMode ) {
 				</div>
 			</div>
 			<div class="bottom-links">
-				<a href="#" onClick="history.go(-1); return false;">&larr; Return whence you came</a>
+				<a href="#" onClick="history.go(-1); return false;">&larr; return whence you came</a>
 			</div>
 		</html>
 	EOF;
