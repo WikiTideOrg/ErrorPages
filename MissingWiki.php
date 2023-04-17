@@ -43,11 +43,6 @@ if ( !$wgCommandLineMode ) {
 						font-size: 21px;
 						padding: 14px 24px;
 					}
-					/* Fade-in */
-					@keyframes fadein {
-						from { opacity: 0; }
-						to { opacity: 1; }
-					}
 					/* Bottom links */
 					.bottom-links {
 						display: flex;
