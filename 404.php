@@ -82,7 +82,7 @@ echo <<<EOF
 			<div class="jumbotron">
 				<p>
 					<a href="https://meta.wikiforge.net">
-						<img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" alt="WikiForge Logo" />
+						<img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" width="130" height="130" alt="WikiForge Logo" />
 					</a>
 				</p>
 				<h1>Page Not Found</h1>
