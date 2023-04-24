@@ -71,7 +71,7 @@ if ( !$wgCommandLineMode ) {
 					<h1>Wiki Not Found</h1>
 					<p class="lead">We couldn't find this wiki. Check your spelling and try again.</p>
 					<p>
-						<a href="https://meta.wikiforge.net/wiki/Special:RequestWiki?wpsubdomain={$subdomain}" class="btn btn-lg btn-outline-primary" role="button">Request the Wiki</a>
+						<a href="https://meta.wikiforge.net/wiki/Special:RequestWiki?wpsubdomain={$subdomain}.wikiforge.net" class="btn btn-lg btn-outline-primary" role="button">Request the Wiki</a>
 					</p>
 				</div>
 			</div>
