@@ -3,21 +3,6 @@
 header( 'Content-Type: text/html; charset=utf-8' );
 header( 'Cache-Control: s-maxage=2678400, max-age=2678400' );
 
-$path = $_SERVER['REQUEST_URI'];
-$encUrl = htmlspecialchars( $path );
-
-if ( preg_match( '/(%2f)/i', $path, $matches )
-	|| preg_match( '/^\/(?:upload|style|wiki|w|extensions)\/(.*)/i', $path, $matches )
-) {
-	// "/w/Foo" -> "/wiki/Foo"
-	$target = '/wiki/' . $matches[1];
-} else {
-	// "/Foo" -> "/wiki/Foo"
-	$target = '/wiki' . $path;
-}
-
-$encTarget = htmlspecialchars( $target );
-
 echo <<<EOF
 	<!DOCTYPE html>
 	<html lang="en">
@@ -86,8 +71,7 @@ echo <<<EOF
 					</a>
 				</p>
 				<h1>Page Not Found</h1>
-				<p style="font-size: 100%;"><b>Did you mean: <a href="$encTarget">$encTarget</a></b></p>
-				<p>We couldn't find this page. Check your spelling and try again or click the link above.</p>
+				<p>We couldn't find this page. Check your spelling and try again.</p>
 			</div>
 		</div>
 		<div class="bottom-links">
