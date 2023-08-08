@@ -29,8 +29,8 @@ if ( !$wgCommandLineMode ) {
 			<head>
 				<meta charset="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<meta name="description" content="Wiki Not Found" />
-				<title>Wiki Not Found</title>
+				<meta name="description" content="Wiki not found" />
+				<title>Wiki not found</title>
 				<link rel="icon" type="image/x-icon" href="https://{$centralServer}/favicon.ico" />
 				<link rel="apple-touch-icon" href="https://{$centralServer}/apple-touch-icon.png" />
 				<!-- Bootstrap core CSS -->
@@ -72,10 +72,6 @@ if ( !$wgCommandLineMode ) {
 						text-align: center;
 						width: 600px;
 					}
-					/* Font */
-					body {
-						font-family: 'Outfit', sans-serif;
-					}
 					/* Dark mode */
 					@media (prefers-color-scheme: dark) {
 						body {
@@ -84,6 +80,10 @@ if ( !$wgCommandLineMode ) {
 						h1, p {
 							color: white;
 						}
+					}
+					/* Font */
+					body {
+						font-family: 'Outfit', sans-serif;
 					}
 				</style>
 			</head>
