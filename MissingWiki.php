@@ -12,12 +12,16 @@ if ( !$wgCommandLineMode ) {
 		'https://static.wikiforge.net/commonswikitide/2/22/WikiTide_icon.svg' :
 		'https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg';
 	$logoAltText = $wi->wikifarm === 'wikitide' ?
-		'WikiTide Logo' :
-		'WikiForge Logo';
+		'WikiTide' :
+		'WikiForge';
 
 	$requestWikiUrl = $wi->wikifarm === 'wikitide' ?
 		'https://meta.wikitide.com/wiki/Special:RequestWiki?wpsubdomain=' . substr( $wgDBname, 0, -8 ) :
 		'https://meta.wikiforge.net/wiki/Special:RequestPremiumWiki?wpsubdomain=' . substr( $wgDBname, 0, -4 );
+
+	$serviceMainPage = $wi->wikifarm === 'wikitide' ?
+		'https://wikitide.com' :
+		'https://wikiforge.net';
 
 	$output = <<<EOF
 		<!DOCTYPE html>
@@ -30,7 +34,9 @@ if ( !$wgCommandLineMode ) {
 				<link rel="icon" type="image/x-icon" href="https://{$centralServer}/favicon.ico" />
 				<link rel="apple-touch-icon" href="https://{$centralServer}/apple-touch-icon.png" />
 				<!-- Bootstrap core CSS -->
-				<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+				<!-- Outfit font from Google Fonts -->
+				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit">
 				<style>
 					/* Error Page Inline Styles */
 					body {
@@ -66,6 +72,10 @@ if ( !$wgCommandLineMode ) {
 						text-align: center;
 						width: 600px;
 					}
+					/* Font */
+					body {
+						font-family: 'Outfit', sans-serif;
+					}
 					/* Dark mode */
 					@media (prefers-color-scheme: dark) {
 						body {
@@ -77,19 +87,21 @@ if ( !$wgCommandLineMode ) {
 					}
 				</style>
 			</head>
-			<div class="container">
+			<div class="container" style="padding: 70px 0; text-align: center;">
 				<!-- Jumbotron -->
 				<div class="jumbotron">
 					<img src="{$logoUrl}" width="130" height="130" alt="{$logoAltText}" />
-					<h1>Wiki Not Found</h1>
-					<p class="lead">We couldn't find this wiki. Check your spelling and try again.</p>
+					<h1><b>Wiki not found</b></h1>
+					<p class="lead">Check your spelling and try again.</p>
 					<p>
-						<a href="{$requestWikiUrl}" class="btn btn-lg btn-outline-primary" role="button">Request the Wiki</a>
+						<a href="{$requestWikiUrl}" class="btn btn-lg btn-outline-primary" role="button">Start this wiki</a>
 					</p>
 				</div>
 			</div>
 			<div class="bottom-links">
-				<a href="#" onClick="history.go(-1); return false;">&larr; Return Whence You Came</a>
+				<a href="#" onClick="history.go(-1); return false;">&larr; Go back</a>
+				<a href="{$serviceMainPage}">{$logoAltText}</a>
+				<a href="https://{$centralServer}/wiki/Special:WikiDiscover">Directory</a>
 			</div>
 		</html>
 	EOF;
