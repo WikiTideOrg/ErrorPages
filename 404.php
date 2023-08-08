@@ -9,12 +9,14 @@ echo <<<EOF
 		<head>
 			<meta charset="utf-8" />
 			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-			<meta name="description" content="Page Not Found" />
-			<title>Page Not Found</title>
+			<meta name="description" content="Page not found" />
+			<title>Page not found</title>
 			<link rel="icon" type="image/x-icon" href="https://meta.wikiforge.net/favicon.ico" />
 			<link rel="apple-touch-icon" href="https://meta.wikiforge.net/apple-touch-icon.png" />
 			<!-- Bootstrap core CSS -->
-			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous"/>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+			<!-- Outfit font from Google Fonts -->
+			<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit">
 			<style>
 				/* Error Page Inline Styles */
 				body {
@@ -60,23 +62,27 @@ echo <<<EOF
 						color: white;
 					}
 				}
+				/* Font */
+				body {
+					font-family: 'Outfit', sans-serif;
+				}
 			</style>
 		</head>
 		<div class="container">
 			<!-- Jumbotron -->
-			<div class="jumbotron">
+			<div class="jumbotron" style="padding: 70px 0; text-align: center;">
 				<p>
-					<a href="https://meta.wikiforge.net">
-						<img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" width="130" height="130" alt="WikiForge Logo" />
+					<a href="https://wikiforge.net">
+						<img src="https://static.wikiforge.net/metawiki/8/88/WikiForge_Logo.svg" width="130" height="130" alt="WikiForge" />
 					</a>
 				</p>
-				<h1>Page Not Found</h1>
+				<h1><b>Page not found</b></h1>
 				<p>We couldn't find this page. Check your spelling and try again.</p>
 			</div>
 		</div>
 		<div class="bottom-links">
-			<a href="#" onClick="history.go(-1); return false;">&larr; Return Whence You Came</a>
-			<a href="/"> Go to Main Page</a>
+			<a href="#" onClick="history.go(-1); return false;">&larr; Go back</a>
+			<a href="/">Main Page</a>
 		</div>
 	</html>
 EOF;
