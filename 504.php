@@ -75,9 +75,10 @@ echo <<<EOF
 					</a>
 				</p>
 				<h1><b>Something went wrong</b></h1>
-				<p class="lead">If this keeps happening, <a href="https://wikiforge.github.io/504.html">let us know</a>.</p>
-			</div>
-					<div class="footer" style="position: fixed; left:0px; bottom: 125px; height:30px; width:100%;">
+				<p class="lead">Give it a bit and try again. <a href="https://static-help.wikiforge.net/docs/errors/504">Learn more</a>.</p>
+				<a href="javascript:document.location.reload(true);" class="btn btn-outline-primary" role="button">Try this action again</a>
+				</div>
+			<div class="footer" style="position: fixed; left:0px; bottom: 125px; height:30px; width:100%;">
 			<div class="text-center">
 				<p class="lead">When reporting this, please include the information below:</p>
 
