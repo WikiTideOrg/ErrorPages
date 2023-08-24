@@ -37,55 +37,7 @@ if ( !$wgCommandLineMode ) {
 				<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 				<!-- Outfit font from Google Fonts -->
 				<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit">
-				<style>
-					/* Error Page Inline Styles */
-					body {
-						padding-top: 20px;
-					}
-					/* Layout */
-					.jumbotron {
-						font-size: 21px;
-						font-weight: 200;
-						line-height: 2.1428571435;
-						color: inherit;
-						padding: 10px 0px;
-						text-align: center;
-						background-color: transparent;
-					}
-					/* Everything but the jumbotron gets side spacing for mobile-first views */
-					.body-content {
-						padding-left: 15px;
-						padding-right: 15px;
-					}
-					/* button */
-					.jumbotron .btn {
-						font-size: 21px;
-						padding: 14px 24px;
-					}
-					/* Bottom links */
-					.bottom-links {
-						display: flex;
-						justify-content: space-between;
-						margin: 30px auto;
-						padding-left: 10px;
-						max-width: 100%;
-						text-align: center;
-						width: 600px;
-					}
-					/* Dark mode */
-					@media (prefers-color-scheme: dark) {
-						body {
-							background-color: #282828;
-						}
-						h1, p {
-							color: white;
-						}
-					}
-					/* Font */
-					body {
-						font-family: 'Outfit', sans-serif;
-					}
-				</style>
+				<link href="/assets/main.css" rel="stylesheet">
 			</head>
 			<div class="container" style="padding: 70px 0; text-align: center;">
 				<!-- Jumbotron -->
