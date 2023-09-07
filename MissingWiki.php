@@ -5,7 +5,7 @@ if ( !$wgCommandLineMode ) {
 	http_response_code( 404 );
 
 	$centralServer = $wi->wikifarm === 'wikitide' ?
-		'meta.wikitide.com' :
+		'meta.wikitide.org' :
 		'meta.wikiforge.net';
 
 	$logoUrl = $wi->wikifarm === 'wikitide' ?
@@ -16,11 +16,11 @@ if ( !$wgCommandLineMode ) {
 		'WikiForge';
 
 	$requestWikiUrl = $wi->wikifarm === 'wikitide' ?
-		'https://meta.wikitide.com/wiki/Special:RequestWiki?wpsubdomain=' . substr( $wgDBname, 0, -8 ) :
+		'https://meta.wikitide.org/wiki/Special:RequestWiki?wpsubdomain=' . substr( $wgDBname, 0, -8 ) :
 		'https://meta.wikiforge.net/wiki/Special:RequestPremiumWiki?wpsubdomain=' . substr( $wgDBname, 0, -4 );
 
 	$serviceMainPage = $wi->wikifarm === 'wikitide' ?
-		'https://wikitide.com' :
+		'https://wikitide.org' :
 		'https://wikiforge.net';
 
 	$output = <<<EOF
