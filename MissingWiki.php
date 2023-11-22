@@ -23,7 +23,7 @@ if ( !$wgCommandLineMode ) {
 			<div class="container" style="padding: 70px 0; text-align: center;">
 				<!-- Jumbotron -->
 				<div class="jumbotron">
-					<img src="https://static.wikiforge.net/commonswikitide/2/22/WikiTide_icon.svg" width="130" height="130" alt="WikiTide" />
+					<img src="https://static.wikitide.net/commonswikitide/2/22/WikiTide_icon.svg" width="130" height="130" alt="WikiTide" />
 					<h1><b>Wiki not found</b></h1>
 					<p class="lead">Check your spelling and try again.</p>
 					<p>
